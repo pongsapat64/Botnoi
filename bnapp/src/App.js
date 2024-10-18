@@ -8,13 +8,40 @@ function App() {
   return (
     <div>
       <Router>
-        <nav className='site-nav'>
-          <ul className="nav">
-            <li><Link className="app-header-item" to="/star">Star</Link></li>
-            <li><Link className="app-header-item" to="/pokemon">Pokemon</Link></li>
-            <li><Link className="app-header-item" to="/resume">Resume</Link></li>
-          </ul>
+        <nav className="bg-gray-800 p-4">
+          <div className="container mx-auto flex justify-between items-center">
+            <div className="text-white text-2xl font-bold">
+              Botnoi
+            </div>
+            <ul className="flex space-x-4">
+              <li>
+                <Link 
+                  className="text-white hover:text-gray-300 transition duration-200"
+                  to="/star"
+                >
+                  Star
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  className="text-white hover:text-gray-300 transition duration-200"
+                  to="/pokemon"
+                >
+                  Pokemon
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  className="text-white hover:text-gray-300 transition duration-200"
+                  to="/resume"
+                >
+                  Resume
+                </Link>
+              </li>
+            </ul>
+          </div>
         </nav>
+
         <Routes>
           <Route path="/star" element={<Star />} />
           <Route path="/pokemon" element={<Pokemon />} />
